@@ -1,0 +1,177 @@
+\documentclass[final, xcolor=cmyk]{beamer}
+\mode<presentation>
+\usepackage{lipsum} %just for random txt 
+\usepackage{graphicx}
+
+
+%\usepackage[UTF8]{ctex} %if you want to input Chinese/Japanese, un-comment this line
+
+
+% STEP 0: Choose your program
+% Applied Psychology:               AppliedPsychology
+% CST:                              ComputerScienceTechnology
+% DS:                               DataScience
+% Financial Mathematics:            FinancialMathematics
+% Food Science:                     FoodScience 
+% Environmental Science:            EnvironmentalScience
+% Statistics:                       Statistics
+\setbeamercolor{frame title}{fg=black,bg=Statistics}
+
+% STEP 1: Change the next line according to your language
+\usepackage[english]{babel}
+
+% STEP 2: Make sure this character encoding matches the one you save this file as
+% (this template is utf8 by default but your editor may change it, causing problems)
+\usepackage[utf8x]{inputenc}
+
+% You probably don't need to touch the following four lines
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amsthm, amssymb, latexsym}
+\usepackage{calc}
+\usepackage{exscale} % required to scale math fonts properly
+\usepackage{eulervm} % Euler VM symbols
+%\usepackage[cmbrightmath,scaleupmath]{tpslifonts}
+%\usepackage{cmbright} % CM Bright math
+\usepackage{ragged2e} 
+\usepackage{svg}
+\graphicspath{{img/}}
+%\usepackage[orientation=portrait,size=a0,scale=1.3]{beamerposter}
+\usepackage[orientation=portrait,size=custom,width=90,height=140,scale=0.95]{beamerposter}
+
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+        \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+% STEP 3:
+% Change colours by setting \usetheme[<id>, twocolumn]{UIC}.
+\usetheme[color, twocolumn]{UIC}
+
+%\setbeamertemplate{background}[grid]{}
+
+% STEP 4: Set up the title and author info
+\titlestart{
+    \begin{center}
+    How to Make a Academic Poster for United International College DST
+    \end{center}
+} % first line of title
+
+\author[*]{
+    \begin{center}
+        Dr.John, Smith, \ Prof.Trump.Johnson
+    \end{center}
+}% author & supervisor
+\titlesize{\Huge} % Use this to change title size if necessary
+
+\institute[*]{
+    \centering
+    Statistics Program, Division of Science and Technology, BNU-HKBU United International College \\
+    Corresponding student author. Tel: +86-131-12345678, E-mail:\href{mailto:exmaple@example.com}{JohnS77@mail.uic.edu.hk} \\
+    Corresponding author. Tel: +85-136-87654321, E-mail: \href{mailto:exmaple@example.com}{MAGA@uic.edu.hk}
+
+}
+
+
+% Stuff such as logos of contributing institutes can be put in the lower left corner using this
+%\leftcorner{}
+
+%\newcommand{\figfont}{\normalsize} % set fotsize for figures 
+
+\begin{document}
+\begin{poster}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First column %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcolumn
+
+\section{Motivation}
+\justifying
+\begin{itemize} 
+    \justifying
+    \item The AR does not provide us a good template 
+    \item Everyone who study in DST need to know \LaTeX \cite{mittelbach2004latex}
+\end{itemize}
+% change line spacing
+
+\lipsum[1-2]
+
+\vspace*{5ex}
+\section{How to Use this Template} \justifying
+The First thing we need to know what is \LaTeX 
+\vspace{3ex}
+\begin{columns}
+    \figfont
+    \newcommand{\figwidth}{\columnwidth}
+    \begin{column}{\columnwidth}
+        \includesvg[clean, width=0.7\columnwidth]{img/IP_band_edge2}
+        \centering{
+        \caption{Band diagrams of InAs and \\ GaAs at equilibrium}
+        }
+    \end{column}
+\end{columns}
+\lipsum[2]
+
+\vspace{5ex}
+
+\section{Simulation} \justifying
+%Capacitance-voltage characteristics were calculated from potential distributions obtained by solving Poisson equation with modified Thomas-Fermi approximation (MTFA).   
+
+Poisson equation with modified Thomas-Fermi approximation (MTFA) was used to calculate CV characteristics. \cite{batts2007beamer}
+\vspace*{-1ex}
+
+\subsection{Poisson equation}
+\vspace*{-1ex}
+    $$
+        \frac{d^2\varphi}{dz^2} =
+         -\frac{q}{\varepsilon\varepsilon_0}\left[N_D^+ - N_A^- - n(z) + \
+          p(z)\right] 
+    $$
+    
+    with electron concentration:
+    $$
+        n(z) = \int_{0}^{\infty}\rho_c(z,E) f_{FD}(E) f_{MTFA}(z,E)dE
+    $$ 
+    
+    and  DOS for non-parabolic conduction band:  
+    $$
+        \rho \left(z,E\right) = \frac{1}{2\pi^2} \left(\frac{2m_{e}}{\hbar^2}\right)^{3/2} \!\!\! \sqrt{E} \cdot \sqrt{1+\alpha E} \cdot \left(1+ 2\alpha E \right)
+    $$  
+    
+%    $$
+%   \text{where}\ \alpha = \frac{1}{E_g}\left(1 - \frac{m_{\Gamma}}{m_0}\right)^{\!2}\ \ \text{--- nonparabolicity coefficient}
+%    $$
+
+\vspace{-1ex}       
+\subsection{Modified Thomas-Fermi approximation}
+    MTFA used to take into account boundary condition for wave function during accumulation.  
+    $$
+    f_{MTFA}(z, E)  = 1 - sinc\left( \frac{2z}{L} \left(\frac{E}{k_BT}\right)^{1/2} \left(1+\alpha E\right)^{1/2}\right)
+    $$
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Second column %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcolumn
+\section{Results}
+
+\lipsum[1-3]
+
+\begin{columns}
+    \figfont
+    \newcommand{\figwidth}{\columnwidth}
+    \begin{column}{\columnwidth}
+        \includesvg[clean, width=0.7\columnwidth]{img/IP_band_edge1}
+        \centering{
+        \caption{Test Figure Two}
+        }
+    \end{column}
+\end{columns}
+
+\lipsum[4-10]
+
+\section{Reference}
+\footnotesize
+\bibliographystyle{IEEEtran}
+\bibliography{reference}
+
+
+\end{poster}
+\end{document}
